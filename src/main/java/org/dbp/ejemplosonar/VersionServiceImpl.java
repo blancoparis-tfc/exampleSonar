@@ -9,8 +9,4 @@ public class VersionServiceImpl implements VersionService {
         return "1.0.1";
     }
 
-
-    private String prueba(String d){
-        return d;
-    }
 }
