@@ -4,12 +4,14 @@ plugins {
 	id 'java'
 	id 'war'
   	id "org.sonarqube" version "3.3"
-
+    id 'jacoco' // Covertura de los test
+	//id 'pmd'
 }
 
 group = 'org.dbp'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
+
 
 repositories {
 	mavenCentral()
@@ -17,10 +19,24 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'junit:junit:4.13.1'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//testImplementation('junit:junit:4.13')
+	testImplementation 'org.assertj:assertj-core:3.21.0'
 }
 
 test {
 	useJUnitPlatform()
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}
+test.finalizedBy jacocoTestReport
+
+tasks.named('sonarqube').configure {
+	dependsOn test
 }
