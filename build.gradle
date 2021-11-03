@@ -5,12 +5,11 @@ plugins {
 	id 'war'
   	id "org.sonarqube" version "3.3"
     id 'jacoco' // Covertura de los test
-	//id 'pmd'
 }
 
 group = 'org.dbp'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '11'
 
 
 repositories {
