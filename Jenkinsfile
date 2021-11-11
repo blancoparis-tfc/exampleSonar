@@ -1,9 +1,11 @@
 pipeline {
-  agent any
+    agent {
+        docker { image 'gradle:6.7-jdk11' }
+    }
   stages {
     stage('paso 1') {
       steps {
-        echo 'Hola mundo'
+        sh 'gradle --version'
       }
     }
 
