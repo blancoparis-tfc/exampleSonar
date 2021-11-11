@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('paso 1') {
       steps {
-        withGradle()
+        echo 'Hola mundo'
       }
     }
 
