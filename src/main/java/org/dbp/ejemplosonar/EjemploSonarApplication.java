@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class EjemploSonarApplication {
 
 	public static void main(String[] args) {
+		String d;
 		SpringApplication.run(EjemploSonarApplication.class, args);
 	}
 
