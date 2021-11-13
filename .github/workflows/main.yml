@@ -22,7 +22,7 @@ jobs:
 
     # Los pasos representan una secuencia de tareas que se ejecutarán como parte del trabajo.
     steps:
-      # Chequea tu repositorio en $GITHUB_WORKSPACE, para que tu trabajo pueda acceder a él
+      # Chequea tu repositorio en $GITHUB_WORKSPACE, para que tu trabajo pueda acceder a el
       - uses: actions/checkout@v2
 
       # Ejecuta un solo comando usando el shell de los corredores
