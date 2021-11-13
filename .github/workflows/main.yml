@@ -34,3 +34,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      # Ejecutar la cobertura
+      - name: Generate JaCoCo Badge
+        uses: cicirello/jacoco-badge-generator@v2.5.0
+        with:
+          generate-branches-badge: true          
