@@ -9,5 +9,7 @@ public class VersionServiceImpl implements VersionService {
         return "1.0.1";
     }
 
-
+    public static void main(String[] args) {
+        System.out.println("hola");    
+    }
 }
