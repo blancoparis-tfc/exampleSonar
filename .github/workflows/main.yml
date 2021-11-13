@@ -1,35 +1,35 @@
-# This is a basic workflow to help you get started with Actions
+# Este es un flujo de trabajo básico para ayudarlo a comenzar con Actions
 
 name: CI
 
-# Controls when the workflow will run
+#Controla cuándo se ejecutará el flujo de trabajo
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
+  # Activa el flujo de trabajo en eventos de solicitud de inserción o extracción, pero solo para la rama principal
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 
-  # Allows you to run this workflow manually from the Actions tab
+  #  Le permite ejecutar este flujo de trabajo manualmente desde la pestaña Acciones
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# Una ejecución de flujo de trabajo se compone de uno o más trabajos que pueden ejecutarse secuencialmente o en paralelo
 jobs:
-  # This workflow contains a single job called "build"
+  #  Este flujo de trabajo contiene un solo trabajo llamado "compilación"
   build:
-    # The type of runner that the job will run on
+    # El tipo de corredor en el que se ejecutará el trabajo
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    # Los pasos representan una secuencia de tareas que se ejecutarán como parte del trabajo.
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Chequea tu repositorio en $GITHUB_WORKSPACE, para que tu trabajo pueda acceder a el
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
+      # Ejecuta un solo comando usando el shell de los corredores
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo Hola mundo!
 
-      # Runs a set of commands using the runners shell
+      # Ejecuta un conjunto de comandos usando el shell de los corredores.
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
