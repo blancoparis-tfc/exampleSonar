@@ -27,7 +27,7 @@ jobs:
 
       # Ejecuta un solo comando usando el shell de los corredores
       - name: Run a one-line script
-        run: echo Hola mundo!
+        run: echo Hola mundo v2!
 
       # Ejecuta un conjunto de comandos usando el shell de los corredores.
       - name: Run a multi-line script
